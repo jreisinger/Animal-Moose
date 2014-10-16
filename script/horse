@@ -1,0 +1,5 @@
+use Horse;
+
+my $talking = Horse->new( name => 'Mr. Ed', born => 2009 );
+$talking->speak;
+$talking->years;
