@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use Horse;
+
+my $h = Horse->new( name => 'Ed' );
+$h->color('brown');
+print $h->name, " is ", $h->color, "\n";
+$h->speak;
