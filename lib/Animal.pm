@@ -6,7 +6,7 @@ use namespace::autoclean;
 
 requires qw(sound default_color);
 
-has 'name' => ( is => 'rw' );
+has 'name' => ( is => 'rw', required => 1 );
 enum 'ColorStr' => [qw(brown black grey)];
 has 'color'     => (
     is      => 'rw',
