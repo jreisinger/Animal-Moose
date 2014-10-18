@@ -3,14 +3,22 @@ use strict;
 use warnings;
 use Horse;
 use Mouse;
+use RaceHorse;
 
 my %beast = (
     Mickey => 'Mouse',
     Ed     => 'Horse',
 );
-
 for my $name ( sort keys %beast ) {
     my $b = $beast{$name}->new( name => $name );
     print $b->name, " is ", $b->color, "\n";
     $b->speak;
 }
+
+my $rh = RaceHorse->new( name => 'Flash' );
+$rh->won;
+$rh->won;
+$rh->won;
+$rh->placed;
+$rh->lost;
+print $rh->name, ": ", $rh->standings, "\n";
