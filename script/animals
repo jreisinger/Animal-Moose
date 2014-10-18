@@ -2,8 +2,24 @@
 use strict;
 use warnings;
 use Horse;
+use Mouse;
 
-my $h = Horse->new( name => 'Ed' );
-$h->color('brown');
-print $h->name, " is ", $h->color, "\n";
-$h->speak;
+#my $h = Horse->new( name => 'Ed' );
+#$h->color('brown');
+#print $h->name, " is ", $h->color, "\n";
+#$h->speak;
+
+#my $m = Mouse->new( name => 'Mickey' );
+#print $m->name, " is ", $m->color, "\n";
+#$m->speak;
+
+my %beasts = (
+    Mickey => 'Mouse',
+    Ed     => 'Horse',
+);
+
+for my $name ( keys %beasts ) {
+    my $b = $beasts{$name}->new( name => $name );
+    print $b->name, " is ", $b->color, "\n";
+    $b->speak;
+}
