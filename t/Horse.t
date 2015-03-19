@@ -4,7 +4,7 @@ use warnings;
 
 BEGIN { use_ok 'Horse' }
 
-can_ok( 'Horse', qw(new sound color name speak) );
+can_ok( 'Horse', $_ ) for (qw(new sound color name speak));
 
 my $h = Horse->new( name => 'Ed' );
 isa_ok( $h, 'Horse' );
